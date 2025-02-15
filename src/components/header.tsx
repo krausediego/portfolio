@@ -6,7 +6,7 @@ export function Header() {
   const { pathname } = useLocation();
 
   return (
-    <div className="flex h-16 items-center gap-6">
+    <div className="flex h-16 items-center gap-6 px-4">
       {pathname !== "/" && (
         <NavLink to="/" className="transition-all">
           <ChevronLeft className="w-4 h-4" />
