@@ -17,8 +17,8 @@ export function AboutPage() {
         Meet Diego, a skilled Full-stack Developer.
       </p>
 
-      <div className="flex w-full border rounded-lg">
-        <img src="/me.png" className="w-96 border-r ml-1 pt-4" />
+      <div className="flex flex-col lg:flex-row w-full border rounded-lg">
+        <img src="/me.png" className="w-96 lg:border-r lg:ml-1 pt-4" />
         <div className="w-full p-4 space-y-6">
           <h2 className="text-sm text-muted-foreground">INTRODUCTION</h2>
           <h3 className="text-xl">
@@ -31,7 +31,7 @@ export function AboutPage() {
             including React, Next.js, Tailwind CSS, Node, Rabbit-MQ.
           </p>
           <Separator />
-          <div className="grid grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
             <div>
               <div className="flex items-center gap-1">
                 <Music className="w-3 h-3 t" />

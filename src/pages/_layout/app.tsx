@@ -3,7 +3,7 @@ import { Outlet } from "react-router";
 
 export function AppLayout() {
   return (
-    <div className="flex min-h-screen max-w-6xl mx-auto p-10 flex-col antialiased">
+    <div className="flex min-h-screen max-w-6xl mx-auto lg:p-10 p-2 flex-col antialiased">
       <Header />
 
       <Outlet />
