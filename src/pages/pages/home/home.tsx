@@ -17,7 +17,7 @@ export function HomePage() {
           repeatDelay={1}
           className={cn(
             "[mask-image:radial-gradient(500px_circle_at_center,white,transparent)] -z-10",
-            "inset-x-0 lg:inset-y-[-20%] inset-y-[-5%] h-[100%] skew-y-12"
+            "inset-x-0 inset-y-[-5%] h-[100%] skew-y-12"
           )}
         />
         <div className="space-y-2 m-auto">
