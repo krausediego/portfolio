@@ -52,16 +52,38 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ['"Poppins"', "sans-serif"],
+        sans: ["Poppins", "sans-serif"],
       },
       keyframes: {
         meteor: {
-          "0%": { transform: "translateY(-20%) translateX(-50%)" },
-          "100%": { transform: "translateY(300%) translateX(-50%)" },
+          "0%": {
+            transform: "translateY(-20%) translateX(-50%)",
+          },
+          "100%": {
+            transform: "translateY(300%) translateX(-50%)",
+          },
+        },
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
         },
       },
       animation: {
         meteor: "meteor var(--duration) var(--delay) ease-in-out infinite",
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
