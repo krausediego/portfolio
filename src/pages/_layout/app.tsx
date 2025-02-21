@@ -1,14 +1,15 @@
-import { Header } from "@/components/header";
-import { Outlet, useLocation } from "react-router-dom";
+import { Outlet, useLocation } from 'react-router-dom'
+
+import { Header } from '@/components/header'
 
 export function AppLayout() {
-  const location = useLocation();
+  const location = useLocation()
 
   return (
-    <div className="flex min-h-screen max-w-6xl mx-auto lg:p-10 p-2 flex-col antialiased">
+    <div className="mx-auto flex min-h-screen max-w-6xl flex-col p-2 antialiased lg:p-10">
       <Header />
 
       <Outlet key={location.pathname} />
     </div>
-  );
+  )
 }

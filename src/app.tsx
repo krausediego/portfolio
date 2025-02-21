@@ -1,10 +1,11 @@
-import { RouterProvider } from "react-router-dom";
-import { routes } from "./routes";
-import { ThemeProvider } from "./components/theme-provider";
-import { inject } from "@vercel/analytics";
-import { Helmet, HelmetProvider } from "react-helmet-async";
+import { inject } from '@vercel/analytics'
+import { Helmet, HelmetProvider } from 'react-helmet-async'
+import { RouterProvider } from 'react-router-dom'
 
-inject();
+import { ThemeProvider } from './components/theme-provider'
+import { routes } from './routes'
+
+inject()
 
 export function App() {
   return (
@@ -14,5 +15,5 @@ export function App() {
         <RouterProvider router={routes} />
       </ThemeProvider>
     </HelmetProvider>
-  );
+  )
 }

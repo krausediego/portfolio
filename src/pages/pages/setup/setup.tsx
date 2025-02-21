@@ -3,5 +3,5 @@ export function SetupPage() {
     <div>
       <span>Setup</span>
     </div>
-  );
+  )
 }

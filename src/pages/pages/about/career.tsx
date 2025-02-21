@@ -1,44 +1,45 @@
+import { Briefcase } from 'lucide-react'
+
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion";
-import { Briefcase } from "lucide-react";
+} from '@/components/ui/accordion'
 
 interface Job {
-  role: string;
-  enterprise: string;
-  date: string;
+  role: string
+  enterprise: string
+  date: string
 }
 
 const jobs: Job[] = [
   {
-    role: "Full stack developer",
-    enterprise: "Idea Maker • Remote",
-    date: "April 2022 - Present",
+    role: 'Full stack developer',
+    enterprise: 'Idea Maker • Remote',
+    date: 'April 2022 - Present',
   },
   {
-    role: "Full stack developer",
-    enterprise: "Freelancer • Remote",
-    date: "January 2020 - 2022",
+    role: 'Full stack developer',
+    enterprise: 'Freelancer • Remote',
+    date: 'January 2020 - 2022',
   },
   {
-    role: "Front end developer",
-    enterprise: "TO UP • Jaraguá do Sul, Brazil",
-    date: "May 2019 - 2020",
+    role: 'Front end developer',
+    enterprise: 'TO UP • Jaraguá do Sul, Brazil',
+    date: 'May 2019 - 2020',
   },
   {
-    role: "Front end developer",
-    enterprise: "iColabora • Jaraguá do Sul, Brazil",
-    date: "January 2019 - 2019",
+    role: 'Front end developer',
+    enterprise: 'iColabora • Jaraguá do Sul, Brazil',
+    date: 'January 2019 - 2019',
   },
   {
-    role: "Programming Enthusiast",
-    enterprise: "Myself",
-    date: "2016 - 2019",
+    role: 'Programming Enthusiast',
+    enterprise: 'Myself',
+    date: '2016 - 2019',
   },
-];
+]
 
 const JobItem = ({
   role,
@@ -56,14 +57,14 @@ const JobItem = ({
       <p className="text-xs text-muted-foreground">{date}</p>
     </div>
   </div>
-);
+)
 
 export function Career() {
-  const currentJobs = jobs.filter((job) => job.date.includes("Present"));
-  const previousJobs = jobs.filter((job) => !job.date.includes("Present"));
+  const currentJobs = jobs.filter((job) => job.date.includes('Present'))
+  const previousJobs = jobs.filter((job) => !job.date.includes('Present'))
 
   return (
-    <div className="w-full border rounded-lg p-4 space-y-4">
+    <div className="w-full space-y-4 rounded-lg border p-4">
       <h3>Career</h3>
 
       {currentJobs.map((job, index) => (
@@ -85,5 +86,5 @@ export function Career() {
         </Accordion>
       )}
     </div>
-  );
+  )
 }

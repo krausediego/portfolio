@@ -1,45 +1,46 @@
-import { Separator } from "@/components/ui/separator";
-import { MapPin, MonitorCog, Music, Popcorn, Tv, Utensils } from "lucide-react";
-import { ReactNode } from "react";
+import { MapPin, MonitorCog, Music, Popcorn, Tv, Utensils } from 'lucide-react'
+import { ReactNode } from 'react'
+
+import { Separator } from '@/components/ui/separator'
 
 interface Info {
-  icon: ReactNode;
-  title: string;
-  value: string;
+  icon: ReactNode
+  title: string
+  value: string
 }
 
 const personalInfo: Info[] = [
   {
-    icon: <Music className="w-3 h-3" />,
-    title: "Music",
-    value: "Rock",
+    icon: <Music className="h-3 w-3" />,
+    title: 'Music',
+    value: 'Rock',
   },
   {
-    icon: <MapPin className="w-3 h-3" />,
-    title: "City",
-    value: "Jaraguá do Sul, SC",
+    icon: <MapPin className="h-3 w-3" />,
+    title: 'City',
+    value: 'Jaraguá do Sul, SC',
   },
   {
-    icon: <Popcorn className="w-3 h-3" />,
-    title: "Movie",
-    value: "Avatar",
+    icon: <Popcorn className="h-3 w-3" />,
+    title: 'Movie',
+    value: 'Avatar',
   },
   {
-    icon: <Tv className="w-3 h-3" />,
-    title: "TV Show",
-    value: "Supernatural",
+    icon: <Tv className="h-3 w-3" />,
+    title: 'TV Show',
+    value: 'Supernatural',
   },
   {
-    icon: <Utensils className="w-3 h-3" />,
-    title: "Food",
-    value: "Burger",
+    icon: <Utensils className="h-3 w-3" />,
+    title: 'Food',
+    value: 'Burger',
   },
   {
-    icon: <MonitorCog className="w-3 h-3" />,
-    title: "System",
-    value: "Windows / Linux (WSL)",
+    icon: <MonitorCog className="h-3 w-3" />,
+    title: 'System',
+    value: 'Windows / Linux (WSL)',
   },
-];
+]
 
 const PersonalInfoCard = ({ icon, title, value }: Info) => (
   <div>
@@ -49,18 +50,18 @@ const PersonalInfoCard = ({ icon, title, value }: Info) => (
     </div>
     <span className="text-sm text-muted-foreground">{value}</span>
   </div>
-);
+)
 
 export function Introduction() {
   return (
-    <div className="flex flex-col lg:flex-row w-full border rounded-lg">
+    <div className="flex w-full flex-col rounded-lg border lg:flex-row">
       <img
         src="/me.png"
-        className="w-96 lg:border-r lg:ml-1 pt-4"
+        className="w-96 pt-4 lg:ml-1 lg:border-r"
         alt="Profile"
       />
 
-      <div className="w-full p-4 space-y-6">
+      <div className="w-full space-y-6 p-4">
         <h2 className="text-sm text-muted-foreground">INTRODUCTION</h2>
 
         <h3 className="text-xl font-semibold">
@@ -76,12 +77,12 @@ export function Introduction() {
 
         <Separator />
 
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 gap-6 lg:grid-cols-3">
           {personalInfo.map((info, index) => (
             <PersonalInfoCard key={index} {...info} />
           ))}
         </div>
       </div>
     </div>
-  );
+  )
 }

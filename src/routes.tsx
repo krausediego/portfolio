@@ -1,31 +1,32 @@
-import { createBrowserRouter } from "react-router-dom";
-import { AppLayout } from "./pages/_layout/app";
-import { HomePage } from "./pages/pages/home/home";
-import { AboutPage } from "./pages/pages/about/about";
-import { ProjectsPage } from "./pages/pages/projects/projects";
-import { ContactPage } from "./pages/pages/contact/contact";
+import { createBrowserRouter } from 'react-router-dom'
+
+import { AppLayout } from './pages/_layout/app'
+import { AboutPage } from './pages/pages/about/about'
+import { ContactPage } from './pages/pages/contact/contact'
+import { HomePage } from './pages/pages/home/home'
+import { ProjectsPage } from './pages/pages/projects/projects'
 
 export const routes = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <AppLayout />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <HomePage />,
       },
       {
-        path: "/about",
+        path: '/about',
         element: <AboutPage />,
       },
       {
-        path: "/projects",
+        path: '/projects',
         element: <ProjectsPage />,
       },
       {
-        path: "/contact",
+        path: '/contact',
         element: <ContactPage />,
       },
     ],
   },
-]);
+])
