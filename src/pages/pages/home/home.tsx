@@ -8,9 +8,7 @@ import { Helmet } from "react-helmet-async";
 export function HomePage() {
   return (
     <>
-      <Helmet>
-        <title>Home | Diego Krause</title>
-      </Helmet>
+      <Helmet title="Home" />
       <div className="flex-1 flex flex-col items-center gap-2 z-10">
         <AnimatedGridPattern
           numSquares={30}
