@@ -1,4 +1,4 @@
-import { useLocation } from "react-router";
+import { useLocation } from "react-router-dom";
 import { NavLink } from "./nav-link";
 import { ChevronLeft } from "lucide-react";
 

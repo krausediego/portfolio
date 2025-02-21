@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { ComponentProps } from "react";
-import { Link, useLocation } from "react-router";
+import { Link, useLocation } from "react-router-dom";
 
 export type NavLinkProps = ComponentProps<typeof Link>;
 
